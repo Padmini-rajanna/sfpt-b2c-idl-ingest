@@ -3,7 +3,10 @@ steps:
   - name: python
     entrypoint: pip
     args: [ "install", "-r", "src/requirements.txt", "--user" ]
-
+  # Run unit tests
+  - name: python
+    entrypoint: python
+    args: [ "-m", "pytest", "--junitxml=${SHORT_SHA}_test_log.xml" ]
   # build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'eu.gcr.io/v135-5339-logistic-mon-dev/ndc-sftp-b2c-idl-import', '-f', './deployment/Dockerfile', '.']
