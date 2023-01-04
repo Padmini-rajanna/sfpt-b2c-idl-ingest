@@ -6,8 +6,8 @@ steps:
 
   # build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'eu.gcr.io/$PROJECT_ID/ndc-sftp-b2c-idl-import', '-f', './deployment/Dockerfile', '.']
+    args: ['build', '-t', 'eu.gcr.io/v135-5339-logistic-mon-dev/ndc-sftp-b2c-idl-import', '-f', './deployment/Dockerfile', '.']
 
   # push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'eu.gcr.io/$PROJECT_ID/ndc-sftp-b2c-idl-import']
+    args: ['push', 'eu.gcr.io/v135-5339-logistic-mon-dev/ndc-sftp-b2c-idl-import']

@@ -3,12 +3,12 @@ from google.cloud import storage
 import os
 from loguru import logger
 
-os.environ["GCLOUD_PROJECT"] = 'playground-padmini'
+os.environ["GCLOUD_PROJECT"] = 'v135-5339-logistic-mon-dev'
 Hostname = "13.79.163.198"
 Username = "00119_IDL_NL"
 Password = ">F154<mkOL"
-client = storage.Client(project='playground-padmini')
-bucket_name = 'csv_test342'
+client = storage.Client(project='v135-5339-logistic-mon-dev')
+bucket_name = 'sftp-idl-b2c-import'
 
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
